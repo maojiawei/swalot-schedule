@@ -4,6 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>io.jovi.ditto</groupId>
+        <artifactId>ditto-framework</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
     <groupId>io.jovi.swalot</groupId>
     <artifactId>swalot-schedule</artifactId>
     <packaging>pom</packaging>
@@ -15,5 +21,49 @@
         <module>swalot-ops</module>
     </modules>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <ditto.version>1.0-SNAPSHOT</ditto.version>
+        <swalot.version>1.0-SNAPSHOT</swalot.version>
+        <h2.version>1.4.193</h2.version>
+        <netty.version>4.1.39.Final</netty.version>
+        <jasypt.version>2.1.0</jasypt.version>
+    </properties>
 
+
+    <dependencyManagement>
+        <dependencies>
+            <!--gastly start-->
+            <dependency>
+                <groupId>io.jovi.swalot</groupId>
+                <artifactId>swalot-service</artifactId>
+                <version>${swalot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jovi.swalot</groupId>
+                <artifactId>swalot-api</artifactId>
+                <version>${swalot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jovi.swalot</groupId>
+                <artifactId>swalot-gateway</artifactId>
+                <version>${swalot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jovi.swalot</groupId>
+                <artifactId>swalot-ops</artifactId>
+                <version>${swalot.version}</version>
+            </dependency>
+            <!--gastly end-->
+            <!--jasypt start-->
+            <dependency>
+                <groupId>com.github.ulisesbocchio</groupId>
+                <artifactId>jasypt-spring-boot-starter</artifactId>
+                <version>${jasypt.version}</version>
+            </dependency>
+            <!--jasypt end-->
+        </dependencies>
+    </dependencyManagement>
 </project>

@@ -11,5 +11,10 @@
 
     <artifactId>swalot-service</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>io.jovi.ditto</groupId>
+            <artifactId>ditto-core</artifactId>
+        </dependency>
+    </dependencies>
 </project>
